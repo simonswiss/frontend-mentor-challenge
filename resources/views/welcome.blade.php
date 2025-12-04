@@ -17,10 +17,10 @@
 
 <body class="max-w-360 mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-[1fr_400px] gap-8 bg-rose-50 py-16">
     <main>
-        <h1 class="text-4xl font-bold">Desserts</h1>
-        <ul class="mt-10 grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+        <h1 class="text-5xl font-bold">Desserts</h1>
+        <ul class="mt-8 grid sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             @foreach ($products as $product)
-            <li class="bg-rose-100 aspect-square rounded-xl"></li>
+            <x-product :product="$product" />
             @endforeach
         </ul>
     </main>
