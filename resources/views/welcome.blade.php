@@ -21,17 +21,6 @@
     >
         <main>
             <h1 class="text-5xl font-bold">Desserts</h1>
-
-            @if ($cart)
-                <ul>
-                    @foreach ($cart->items as $item)
-                        <li>
-                            {{ $item->product->name }} ({{ $item->quantity }})
-                        </li>
-                    @endforeach
-                </ul>
-            @endif
-
             <ul
                 class="mt-8 grid gap-6 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
             >
@@ -40,6 +29,6 @@
                 @endforeach
             </ul>
         </main>
-        <x-cart />
+        <x-cart :cart="$cart" />
     </body>
 </html>
