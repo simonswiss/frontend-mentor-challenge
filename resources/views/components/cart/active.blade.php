@@ -22,9 +22,21 @@
                         </span>
                     </div>
                 </div>
-                <button class="rounded-full border border-rose-400 p-[3px]">
-                    <x-icons.delete class="size-3 rounded-full text-rose-400" />
-                </button>
+                <form
+                    action="{{ route("cart.removeAll", $item) }}"
+                    method="POST"
+                >
+                    @csrf
+                    @method("DELETE")
+                    <button
+                        class="rounded-full border border-rose-400 p-[3px]"
+                        type="submit"
+                    >
+                        <x-icons.delete
+                            class="size-3 rounded-full text-rose-400"
+                        />
+                    </button>
+                </form>
             </li>
         @endforeach
     </ul>

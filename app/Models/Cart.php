@@ -24,6 +24,11 @@ class Cart extends Model
         return $this->hasMany(CartItem::class);
     }
 
+    public function quantityOf(Product $product): int
+    {
+        return $this->items->firstWhere('product_id', $product->id)->quantity ?? 0;
+    }
+
     public function totalItemsCount()
     {
         return $this->items->sum('quantity');
@@ -57,5 +62,18 @@ class Cart extends Model
         ], [
             'quantity' => 0,
         ])->increment('quantity');
+    }
+
+    public function decrementItem(Product $product)
+    {
+        $item = $this->items->firstWhere('product_id', $product->id);
+
+        if (!$item) return;
+
+        if ($item->quantity > 1) {
+            $item->decrement('quantity');
+        } else {
+            $item->delete();
+        }
     }
 }
