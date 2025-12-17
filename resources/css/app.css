@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
 
 @theme {
     /* Colors */
     --color-*: initial;
 
     --color-white: hsl(0, 0%, 100%);
+    --color-black: hsl(0, 0%, 0%);
+
     --color-red: hsl(14, 86%, 42%);
     --color-green: hsl(159, 69%, 38%);
 
@@ -21,7 +23,8 @@
     --color-rose-900: hsl(14, 65%, 9%);
 
     /* Font families */
-    --font-sans: "Red Hat Text", ui-sans-serif, system-ui, sans-serif,
+    --font-sans:
+        "Red Hat Text", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
 
