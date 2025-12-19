@@ -3,11 +3,11 @@
 ])
 
 <div
-    class="m-auto max-h-dvh w-120 max-w-full translate-y-1 rounded-lg bg-white p-8 opacity-0 transition-discrete duration-200 backdrop:bg-black/50 backdrop:opacity-0 backdrop:backdrop-blur-sm backdrop:transition-[opacity,display] open:flex open:translate-y-0 open:flex-col open:gap-6 open:opacity-100 open:backdrop:opacity-100 starting:scale-95 starting:open:opacity-0 starting:open:backdrop:opacity-0"
+    class="m-auto max-h-[calc(100dvh-2rem)] w-120 max-w-full translate-y-1 rounded-lg bg-white p-8 opacity-0 transition-discrete duration-200 backdrop:bg-black/50 backdrop:opacity-0 backdrop:backdrop-blur-sm backdrop:transition-[opacity,display] open:flex open:translate-y-0 open:flex-col open:gap-6 open:opacity-100 open:backdrop:opacity-100 starting:scale-95 starting:open:opacity-0 starting:open:backdrop:opacity-0"
     popover
     id="order-confirmation"
 >
-    <x-icons.confirmation class="text-green size-12" />
+    <x-icons.confirmation class="text-green size-12 shrink-0" />
 
     <div>
         <h2 class="text-4xl font-bold">Order Confirmed!</h2>
@@ -57,7 +57,7 @@
     <form action="{{ route("cart.emptyCart") }}" method="POST">
         @csrf
         <button
-            class="bg-red w-full rounded-full px-6 py-4 text-white"
+            class="bg-red hover:bg-red-dark w-full rounded-full px-6 py-4 text-white"
             type="submit"
         >
             Start New Order

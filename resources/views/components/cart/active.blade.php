@@ -59,7 +59,7 @@
 
     <button
         popovertarget="order-confirmation"
-        class="bg-red rounded-full px-6 py-4 text-white"
+        class="bg-red hover:bg-red-dark rounded-full px-6 py-4 text-white transition"
     >
         Confirm Order
     </button>

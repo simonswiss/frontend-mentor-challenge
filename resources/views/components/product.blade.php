@@ -10,7 +10,7 @@
 <li>
     <article>
         <img
-            class="aspect-square rounded-xl object-cover"
+            class="{{ $quantity ? "border-red border-2" : "" }} aspect-square rounded-xl object-cover"
             src="{{ Vite::asset("resources/images/" . $product->image) }}"
             alt="Photo of {{ $product->name }}"
         />
@@ -26,11 +26,11 @@
                     @csrf
                     @method("PATCH")
                     <button
-                        class="rounded-full border-2 border-white p-1"
+                        class="group rounded-full border-2 border-white p-1 hover:bg-white"
                         type="submit"
                     >
                         <svg
-                            class="size-2.5 text-white"
+                            class="group-hover:text-red size-2.5 text-white"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 10 2"
@@ -49,11 +49,11 @@
                 >
                     @csrf
                     <button
-                        class="rounded-full border-2 border-white p-1"
+                        class="group rounded-full border-2 border-white p-1 hover:bg-white"
                         type="submit"
                     >
                         <svg
-                            class="size-2.5 text-white"
+                            class="group-hover:text-red size-2.5 text-white"
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 10 10"
